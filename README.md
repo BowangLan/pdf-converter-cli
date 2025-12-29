@@ -2,6 +2,12 @@
 
 A modern TUI (Text User Interface) application built with Textual that lets you create and edit text files, then automatically converts them to PDF. Features a beautiful full-screen interface with modal dialogs and smooth interactions.
 
+## Demo
+
+https://github.com/user-attachments/assets/pdf-converter_demo.mp4
+
+> **Note:** If the video doesn't play above, you can [download it here](./assets/pdf-converter_demo.mp4).
+
 ## Features
 
 - 📋 **File List View** - Browse all .txt files in the documents directory, sorted by last modified
