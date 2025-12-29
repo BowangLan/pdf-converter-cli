@@ -4,9 +4,7 @@ A modern TUI (Text User Interface) application built with Textual that lets you 
 
 ## Demo
 
-https://github.com/user-attachments/assets/pdf-converter_demo.mp4
-
-> **Note:** If the video doesn't play above, you can [download it here](./assets/pdf-converter_demo.mp4).
+![Demo](./assets/pdf-converter_demo.mp4)
 
 ## Features
 
