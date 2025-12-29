@@ -4,7 +4,7 @@ A modern TUI (Text User Interface) application built with Textual that lets you 
 
 ## Demo
 
-![Demo](./assets/pdf-converter_demo.mp4)
+![Demo](./assets/pdf-converter_demo.gif)
 
 ## Features
 
