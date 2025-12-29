@@ -1,0 +1,7 @@
+{
+  "text_filename_format": "{name}_Cover_Letter.txt",
+  "pdf_filename_format": "{name}_Cover_Letter.pdf",
+  "conversion_script": "./scripts/convert_to_pdf.sh",
+  "style_template": "./templates/style.tex",
+  "output_directory": "./documents"
+}

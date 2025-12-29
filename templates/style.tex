@@ -1,0 +1,21 @@
+% Page geometry
+\usepackage[margin=1in]{geometry}
+
+% Font configuration
+\usepackage{fontspec}
+\setmainfont{Inter}[
+  UprightFont = *-Regular,
+  BoldFont = *-SemiBold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-SemiBoldItalic
+]
+
+% Font size (11pt base)
+\AtBeginDocument{\fontsize{9}{11.2}\selectfont}
+
+% Line spacing
+\linespread{1.3}
+
+% Paragraph spacing (also removes indentation)
+\usepackage{parskip}
+\setlength{\parskip}{12pt}
