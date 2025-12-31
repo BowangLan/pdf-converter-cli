@@ -135,7 +135,7 @@ class EditorScreen(Screen):
     BINDINGS = [
         Binding("ctrl+s", "save", "Save & Convert", priority=True),
         Binding("ctrl+l", "clear", "Clear", priority=True),
-        Binding("ctrl+q", "cancel", "Cancel", priority=True),
+        Binding("escape", "cancel", "Cancel", priority=True),
     ]
 
     def __init__(self, filepath: str, content: str = "", **kwargs):

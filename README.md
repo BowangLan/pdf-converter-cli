@@ -161,7 +161,7 @@ source ~/.zshrc
 #### Editor Mode
 - **`Ctrl+S`** - Save and convert to PDF
 - **`Ctrl+L`** - Clear all text (with confirmation)
-- **`Ctrl+Q`** - Cancel without saving
+- **`Esc`** - Cancel without saving
 
 ## Configuration
 
