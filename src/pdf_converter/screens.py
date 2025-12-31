@@ -348,22 +348,28 @@ class FileListScreen(Screen):
 
         # Show result
         if success:
-            # Auto-open the PDF
-            try:
-                system = platform.system()
-                if system == 'Darwin':  # macOS
-                    subprocess.Popen(['open', pdf_filename])
-                elif system == 'Linux':
-                    subprocess.Popen(['xdg-open', pdf_filename])
-                elif system == 'Windows':
-                    subprocess.Popen(['start', pdf_filename], shell=True)
-            except Exception:
-                pass
+            opened_pdf = False
+            if self.config.should_auto_open_pdf():
+                try:
+                    system = platform.system()
+                    if system == 'Darwin':  # macOS
+                        subprocess.Popen(['open', pdf_filename])
+                    elif system == 'Linux':
+                        subprocess.Popen(['xdg-open', pdf_filename])
+                    elif system == 'Windows':
+                        subprocess.Popen(['start', pdf_filename], shell=True)
+                    opened_pdf = True
+                except Exception:
+                    opened_pdf = False
+
+            success_message = f"File saved: {Path(txt_file).name}\nPDF created: {Path(pdf_filename).name}"
+            if opened_pdf:
+                success_message += "\n\nPDF opened automatically."
 
             await self.app.push_screen_wait(
                 MessageScreen(
                     "✓ SUCCESS",
-                    f"File saved: {Path(txt_file).name}\nPDF created: {Path(pdf_filename).name}\n\nPDF opened automatically."
+                    success_message
                 )
             )
         else:

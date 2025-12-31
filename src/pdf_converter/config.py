@@ -24,7 +24,8 @@ class PDFConverterConfig:
                 "pdf_filename_format": "{name}_Cover_Letter.pdf",
                 "conversion_script": "./scripts/convert_to_pdf.sh",
                 "style_template": "./templates/style.tex",
-                "output_directory": "./documents"
+                "output_directory": "./documents",
+                "auto_open_pdf": True
             }
             with open(self.config_path, 'w') as f:
                 json.dump(default_config, f, indent=2)
@@ -50,3 +51,7 @@ class PDFConverterConfig:
     def get_style_template(self):
         """Get the path to the style template."""
         return self.config.get("style_template", "./templates/style.tex")
+
+    def should_auto_open_pdf(self):
+        """Check whether PDFs should auto-open after conversion."""
+        return self.config.get("auto_open_pdf", True)
